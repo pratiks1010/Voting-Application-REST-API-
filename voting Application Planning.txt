@@ -1,0 +1,81 @@
+Voting Application Overview
+
+
+What?
+A sophisticated voting application enabling users to cast votes for a provided set of candidates.
+
+Models
+
+
+User:
+
+Attributes:
+Name
+Age
+Email
+Mobile
+Address
+Aadhar Card Number (unique)
+Password
+Role (voter or admin)
+Voted Status
+
+
+Methods:
+User Sign Up
+User Sign In
+Change Password
+
+
+Candidate:
+Attributes:
+Name
+Party Affiliation
+Age
+Vote Count
+
+
+Methods:
+None (data maintained by admin)
+
+
+Routes
+
+User Authentication:
+/signup: POST - Create a new user account.
+/login: POST - Log in to an existing account.
+
+
+Voting:
+/candidates: GET - Retrieve the list of candidates.
+/vote/:candidateId: POST - Vote for a specific candidate.
+
+
+Vote Counts:
+/vote/counts: GET - Obtain the list of candidates sorted by their vote counts.
+
+
+User Profile:
+/profile: GET - Fetch the user's profile information.
+/profile/password: PUT - Update the user's password.
+
+
+Admin Candidate Management:
+/candidates: POST - Add a new candidate.
+/candidates/:candidateId : PUT - Update an existing candidate.
+DELETE - Remove a candidate from the list.
+
+
+Additional Features:
+
+
+User authentication with Aadhar card number and password.
+Role-based access control with one admin user to manage candidates.
+Preventing admin users from voting.
+Dynamic update of candidate vote counts.
+Secure password management with the ability for users to change their passwords.
+Error handling for duplicate Aadhar card numbers and existing admin users.
+
+
+
+This layout emphasizes each aspect of the application, making it easier to understand and implement.
